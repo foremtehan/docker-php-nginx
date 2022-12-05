@@ -17,13 +17,13 @@ RUN apk add --no-cache \
   php81-gd \
   php81-intl \
   php81-mbstring \
-  php81-mysqli \
   php81-opcache \
   php81-openssl \
   php81-phar \
-  php81-session \
+  php81-fileinfo \
   php81-xml \
-  php81-xmlreader \
+  php81-pdo \
+  php81-pdo_pgsql \
   supervisor
 
 # Create symlink so programs depending on `php` still function
@@ -53,6 +53,3 @@ EXPOSE 8080
 
 # Let supervisord start nginx & php-fpm
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
-
-# Configure a healthcheck to validate that everything is up&running
-HEALTHCHECK --timeout=10s CMD curl --silent --fail http://127.0.0.1:8080/fpm-ping
