@@ -20,6 +20,7 @@ RUN apk add --no-cache \
   php81-opcache \
   php81-openssl \
   php81-phar \
+  php81-tokenizer \
   php81-fileinfo \
   php81-xml \
   php81-pdo \
