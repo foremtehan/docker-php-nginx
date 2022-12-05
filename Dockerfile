@@ -23,6 +23,7 @@ RUN apk add --no-cache \
   php81-tokenizer \
   php81-fileinfo \
   php81-xml \
+  php81-xmlwriter \
   php81-pdo \
   php81-pdo_pgsql \
   supervisor
